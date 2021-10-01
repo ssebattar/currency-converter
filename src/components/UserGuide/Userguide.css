@@ -1,0 +1,9 @@
+.text-wrapper {
+  padding: 30px;
+  background-color: rgb(34, 61, 119);
+}
+
+b,
+h2 {
+  color: snow;
+}
