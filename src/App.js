@@ -56,6 +56,8 @@ function App() {
     setTo(temp);
   }
 
+  const ColoredLine = () => <hr />;
+
   /* var curr = "./currencies.json";
   var c = JSON.parse(curr);
   var r = [];
@@ -64,7 +66,7 @@ function App() {
   return (
     <div className="outer">
       <div className="heading">
-        <h1>Project 495 Group 6 - Currency Converter</h1>
+        <h1>CMSC 495 Group 6 Project - Currency Converter</h1>
       </div>
 
       <div className="inner">
@@ -74,7 +76,7 @@ function App() {
 
         <div className="App">
           <div className="img-header">
-            <img src={img_header} width="900" height="150" />
+            <img src={img_header} width="900" height="180" />
           </div>
           <div className="container">
             <div className="left">
@@ -149,6 +151,15 @@ function App() {
                 </p>
               </div>
             </div>
+            <ColoredLine />
+          </div>
+          <div className="active">
+            Currency live data is active. Updated few seconds ago.
+          </div>
+          <div>---</div>
+          <div>
+            © CMSC 495 6380 - Current Trends and Projects in Computer Science -
+            2218. Fall 2021 Group 6. All rights reserved.
           </div>
         </div>
       </div>

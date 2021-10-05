@@ -24,6 +24,10 @@
   overflow-y: scroll;
 }
 
+.active {
+  color: #30b4f7;
+}
+
 .App {
   height: 100vh;
   width: 100%;
