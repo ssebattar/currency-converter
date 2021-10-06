@@ -16,6 +16,7 @@ function App() {
   const [to, setTo] = useState("jpy");
   const [options, setOptions] = useState([]);
   const [output, setOutput] = useState(0);
+  const [name, setName] = useState([]);
   const [names, setNames] = useState([]);
 
   // Calling the api whenever the dependency changes
@@ -25,28 +26,31 @@ function App() {
     ).then((res) => {
       setInfo(res.data[from]);
     });
-  }, [from]);
 
-  // Set name
-  useEffect(() => {
     Axios.get(
       `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json`
     ).then((res) => {
-      setNames(res.data);
+      setName(res.data);
     });
-  });
+  }, [from]);
 
   // Calling the convert function whenever
   // a user switches the currency
+
   useEffect(() => {
-    setOptions(Object.keys(info));
+    // setOptions(Object.keys(info));
+    setNames(Object.values(name));
     convert();
-  }, [info]);
+  }, [name]);
 
   // Function to convert the currency
-  var rate = info[to];
+  function rate() {
+    return info[to];
+  }
+
+  // Calculate the rate
   function convert() {
-    setOutput(input * rate);
+    setOutput(input * rate());
   }
 
   // Function to switch between two currency
@@ -56,12 +60,13 @@ function App() {
     setTo(temp);
   }
 
+  // Draw Horizontal Line
   const ColoredLine = () => <hr />;
 
-  /* var curr = "./currencies.json";
-  var c = JSON.parse(curr);
-  var r = [];
-  for (var i in c) r.push(c[i]); */
+  // Get currency key by its value
+  function getKeyByValue(object, value) {
+    return Object.keys(object).find((key) => object[key] === value);
+  }
 
   return (
     <div className="outer">
@@ -83,18 +88,22 @@ function App() {
               <h3>Amount</h3>
               <input
                 type="text"
-                placeholder="Enter the amount"
-                onChange={(e) => setInput(e.target.value)}
+                placeholder="Enter amount"
+                onKeyUp={() => convert()}
+                onChange={(e) => {
+                  setInput(e.target.value);
+                }}
               />
             </div>
             <div className="middle">
               <h3>From</h3>
               <Dropdown
-                options={options}
+                options={names}
                 onChange={(e) => {
-                  setFrom(e.value);
+                  setFrom(getKeyByValue(name, e.value));
+                  convert();
                 }}
-                value={from.toUpperCase()}
+                value={`(${from.toUpperCase()}) ${name[from]}`}
                 placeholder="From"
               />
             </div>
@@ -109,11 +118,12 @@ function App() {
             <div className="right">
               <h3>To</h3>
               <Dropdown
-                options={options}
+                options={names}
                 onChange={(e) => {
-                  setTo(e.value);
+                  setTo(getKeyByValue(name, e.value));
+                  convert();
                 }}
-                value={to.toUpperCase()}
+                value={`(${to.toUpperCase()}) ${name[to]}`}
                 placeholder="To"
               />
             </div>
@@ -145,7 +155,7 @@ function App() {
                   {"1 " +
                     from.toUpperCase() +
                     " = " +
-                    rate +
+                    rate() +
                     " " +
                     to.toUpperCase()}
                 </p>

@@ -52,20 +52,22 @@
 }
 .container {
   height: 100px;
-  width: 800px;
+  width: 95%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 input {
   padding-left: 5px;
-  font-size: 20px;
+  font-size: 15px;
   height: 36px;
 }
+
 .middle,
 .right {
-  width: 120px;
+  width: 300px;
 }
+
 .switch {
   padding: 5px;
   margin-top: 25px;
