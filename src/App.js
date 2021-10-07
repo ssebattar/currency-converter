@@ -9,6 +9,7 @@ import "./App.css";
 import Userguide from "./components/UserGuide/Userguide";
 import FullUserguide from "./components/UserGuide/FullUserguide";
 import img_header from "./image-header.jpg";
+import img_footer from "./img-header.jpg";
 
 function App() {
   // Initializing all the state variables
@@ -173,6 +174,9 @@ function App() {
           </div>
           <div className="active">
             Currency live data is active. Updated few seconds ago.
+          </div>
+          <div className="img-header">
+            <img src={img_footer} width="900" height="80" />
           </div>
         </div>
       </div>
