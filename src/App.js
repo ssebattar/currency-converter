@@ -5,8 +5,10 @@ import { HiSwitchHorizontal } from "react-icons/hi";
 
 import "react-dropdown/style.css";
 import "./App.css";
+
 import Userguide from "./components/UserGuide/Userguide";
-import img_header from "./img-header.jpg";
+import FullUserguide from "./components/UserGuide/FullUserguide";
+import img_header from "./img-header.PNG";
 
 function App() {
   // Initializing all the state variables
@@ -14,10 +16,10 @@ function App() {
   const [input, setInput] = useState(0);
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("jpy");
-  const [options, setOptions] = useState([]);
   const [output, setOutput] = useState(0);
   const [name, setName] = useState([]);
   const [names, setNames] = useState([]);
+  const [value, setValue] = useState(0);
 
   // Calling the api whenever the dependency changes
   useEffect(() => {
@@ -38,7 +40,6 @@ function App() {
   // a user switches the currency
 
   useEffect(() => {
-    // setOptions(Object.keys(info));
     setNames(Object.values(name));
     convert();
   }, [name]);
@@ -68,6 +69,10 @@ function App() {
     return Object.keys(object).find((key) => object[key] === value);
   }
 
+  const validateAmount = (amount) => {
+    if (amount < 0) return 0;
+  };
+
   return (
     <div className="outer">
       <div className="heading">
@@ -83,16 +88,19 @@ function App() {
           <div className="img-header">
             <img src={img_header} width="900" height="180" />
           </div>
+
           <div className="container">
             <div className="left">
               <h3>Amount</h3>
               <input
-                type="text"
+                type="number"
+                min="0"
+                step="1"
                 placeholder="Enter amount"
-                onKeyUp={() => convert()}
                 onChange={(e) => {
                   setInput(e.target.value);
                 }}
+                onKeyUp={() => convert()}
               />
             </div>
             <div className="middle">
@@ -166,13 +174,9 @@ function App() {
           <div className="active">
             Currency live data is active. Updated few seconds ago.
           </div>
-          <div>---</div>
-          <div>
-            © CMSC 495 6380 - Current Trends and Projects in Computer Science -
-            2218. Fall 2021 Group 6. All rights reserved.
-          </div>
         </div>
       </div>
+      <FullUserguide />
     </div>
   );
 }

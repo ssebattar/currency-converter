@@ -1,0 +1,28 @@
+.text-wrapper-full-guide {
+  padding-top: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+  color: rgb(30, 42, 117);
+  background-color: rgb(184, 235, 218);
+}
+
+b {
+  color: rgb(23, 28, 59);
+}
+h2 {
+  color: snow;
+  text-align: center;
+}
+
+.usrg-hd {
+  background-color: rgb(6, 94, 64);
+  width: 100%;
+}
+
+.footer {
+  background-color: rgb(23, 28, 59);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: snow;
+}
