@@ -8,7 +8,7 @@ import "./App.css";
 
 import Userguide from "./components/UserGuide/Userguide";
 import FullUserguide from "./components/UserGuide/FullUserguide";
-import img_header from "./img-header.png";
+import img_header from "./img-header.jpg";
 
 function App() {
   // Initializing all the state variables
