@@ -49,11 +49,15 @@ const Userguide = () => {
       <br />
       <b id="ug-s">Installation</b>
       <br />
-      Non etiam tempor id arcu magna ante eget. Nec per posuere cubilia cras
-      porttitor condimentum orci suscipit. Leo maecenas in tristique, himenaeos
-      elementum placerat. Taciti rutrum nostra, eget cursus velit ultricies.
-      Quam molestie tellus himenaeos cubilia congue vivamus ultricies. Interdum
-      praesent ut penatibus fames eros ad consectetur sed.
+      <br />
+      1) Browse for the execution file of the currency converter the app and
+      download it.
+      <br />
+      2) Now that you have downloaded the app go to the Downloads folder on your
+      computer to locate the file.
+      <br />
+      3) Once you have found it, click it to install the application or exe on
+      your PC or Mac computer.
       <br />
       <a>Scroll Down to Read More...</a>
       <br />
