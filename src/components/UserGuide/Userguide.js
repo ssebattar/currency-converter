@@ -12,6 +12,7 @@ const Userguide = () => {
       currency names, 3-letter ISO currency symbols, or country names to select
       your currency. Type values in enter amount box of the converter.
       <br />
+      <br />
       1) Enter the amount
       <br />
       2) Select the currency you are converting from
