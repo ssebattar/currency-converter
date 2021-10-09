@@ -1,5 +1,6 @@
 import React from "react";
 
+import img_userguide from "../../usrg.jpg";
 import "./FullUserguide.css";
 
 const FullUserguide = () => {
@@ -21,6 +22,7 @@ const FullUserguide = () => {
         currency names, 3-letter ISO currency symbols, or country names to
         select your currency. Type values in enter amount box of the converter.
         <br />
+        <br />
         1) Enter the amount
         <br />
         2) Select the currency you are converting from
@@ -33,7 +35,7 @@ const FullUserguide = () => {
         <br />
         <br />
         <div className="img-usrg">
-          <img src={img_userguide} width="500" height="300" />
+          <img src={img_userguide} width="900" height="250" />
         </div>
         <br />
         <br />
