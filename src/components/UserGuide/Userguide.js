@@ -10,9 +10,17 @@ const Userguide = () => {
       <br />
       Use the Currency Converter to calculate exchange rates for any day. Type
       currency names, 3-letter ISO currency symbols, or country names to select
-      your currency. Type values in either side of the converter, depending on
-      if you have money to exchange or if you want money to purchase items
-      costing a certain amount.
+      your currency. Type values in enter amount box of the converter.
+      <br />
+      1) Enter the amount
+      <br />
+      2) Select the currency you are converting from
+      <br />
+      3) Select the currency you are converting to
+      <br />
+      4) Press the convert button
+      <br />
+      5) Observe the results. The exchange rate and the converted amount.
       <br />
       <a>Scroll Down to Read More...</a>
       <br />
