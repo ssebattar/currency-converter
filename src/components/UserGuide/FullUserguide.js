@@ -95,11 +95,21 @@ const FullUserguide = () => {
         <br />
         <b>Installation</b>
         <br />
-        Non etiam tempor id arcu magna ante eget. Nec per posuere cubilia cras
-        porttitor condimentum orci suscipit. Leo maecenas in tristique,
-        himenaeos elementum placerat. Taciti rutrum nostra, eget cursus velit
-        ultricies. Quam molestie tellus himenaeos cubilia congue vivamus
-        ultricies. Interdum praesent ut penatibus fames eros ad consectetur sed.
+        <br />
+        1) Browse for the execution file of the currency converter the app and
+        download it.
+        <br />
+        2) Now that you have downloaded the app go to the Downloads folder on
+        your computer to locate the file.
+        <br />
+        3) Once you have found it, click it to install the application or exe on
+        your PC or Mac computer.
+        <br />
+        4) Now click Next to accept the license agreement. Follow the on-screen
+        directives to install the application properly.
+        <br />
+        5) If you do the above correctly, the currency converter app will be
+        successfully installed.
         <br />
         <ColoredLine />
         <br />
